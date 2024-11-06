@@ -1,20 +1,14 @@
-/**
- * Program IDL in camelCase format in order to be used in JS/TS.
- *
- * Note that this is only a type helper and is not the actual IDL. The original
- * IDL can be found at `target/idl/voting_dapp.json`.
- */
-export type VotingDapp = {
+{
   "address": "AsjZ3kWAUSQRNt2pZVeJkywhZ6gpLpHZmJjduPmKZDZZ",
   "metadata": {
-    "name": "votingDapp",
+    "name": "Voting_dapp",
     "version": "0.1.0",
     "spec": "0.1.0",
     "description": "Created with Anchor"
   },
   "instructions": [
     {
-      "name": "initializePoll",
+      "name": "initialize_poll",
       "discriminator": [
         193,
         22,
@@ -38,19 +32,19 @@ export type VotingDapp = {
             "seeds": [
               {
                 "kind": "arg",
-                "path": "pollId"
+                "path": "poll_id"
               }
             ]
           }
         },
         {
-          "name": "systemProgram",
+          "name": "system_program",
           "address": "11111111111111111111111111111111"
         }
       ],
       "args": [
         {
-          "name": "pollId",
+          "name": "_poll_id",
           "type": "u64"
         }
       ]
@@ -58,7 +52,7 @@ export type VotingDapp = {
   ],
   "accounts": [
     {
-      "name": "poll",
+      "name": "Poll",
       "discriminator": [
         110,
         234,
@@ -73,12 +67,12 @@ export type VotingDapp = {
   ],
   "types": [
     {
-      "name": "poll",
+      "name": "Poll",
       "type": {
         "kind": "struct",
         "fields": [
           {
-            "name": "pollId",
+            "name": "poll_id",
             "type": "u64"
           },
           {
@@ -86,19 +80,19 @@ export type VotingDapp = {
             "type": "string"
           },
           {
-            "name": "pollStart",
+            "name": "poll_start",
             "type": "u64"
           },
           {
-            "name": "pollEnd",
+            "name": "poll_end",
             "type": "u64"
           },
           {
-            "name": "candidateAmount",
+            "name": "candidate_amount",
             "type": "u64"
           }
         ]
       }
     }
   ]
-};
+}

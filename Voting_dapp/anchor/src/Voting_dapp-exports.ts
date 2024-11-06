@@ -2,13 +2,13 @@
 import { AnchorProvider, Program } from '@coral-xyz/anchor'
 import { Cluster, PublicKey } from '@solana/web3.js'
 import VotingDappIDL from '../target/idl/Voting_dapp.json'
-import type { VotingDapp } from '../target/types/Voting_dapp'
+import type { VotingDapp } from '../target/types/voting'
 
 // Re-export the generated IDL and type
 export { VotingDapp, VotingDappIDL }
 
 // The programId is imported from the program IDL.
-export const VOTING_DAPP_PROGRAM_ID = new PublicKey(VotingDappIDL.address)
+export const Voting_dapp_PROGRAM_ID = new PublicKey(VotingDappIDL.address)
 
 // This is a helper function to get the VotingDapp Anchor program.
 export function getVotingDappProgram(provider: AnchorProvider) {
@@ -24,6 +24,6 @@ export function getVotingDappProgramId(cluster: Cluster) {
       return new PublicKey('CounNZdmsQmWh7uVngV9FXW2dZ6zAgbJyYsvBpqbykg')
     case 'mainnet-beta':
     default:
-      return VOTING_DAPP_PROGRAM_ID
+      return Voting_dapp_PROGRAM_ID
   }
 }

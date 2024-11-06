@@ -1,5 +1,5 @@
 [package]
-name = "voting_dapp"
+name = "Voting_dapp"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
