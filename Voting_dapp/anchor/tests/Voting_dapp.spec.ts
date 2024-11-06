@@ -20,7 +20,13 @@ describe('Voting', () => {
       provider,
     );
 
-    await votingProgram.methods
+    await votingProgram.methods.initializePoll(
+      new anchor.BN(1),
+      "What is favorite type of smartphone?",
+      new anchor.BN(0),
+      new anchor.BN(1830925334),
+    ).rpc();
+
   });
 });
 
