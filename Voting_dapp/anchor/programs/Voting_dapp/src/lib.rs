@@ -5,7 +5,7 @@ use anchor_lang::prelude::*;
 declare_id!("AsjZ3kWAUSQRNt2pZVeJkywhZ6gpLpHZmJjduPmKZDZZ");
 
 #[program]
-pub mod Voting_dapp {
+pub mod voting_dapp {
     use super::*;
 
     pub fn initialize_poll(ctx: Context<InitializePoll>, 
